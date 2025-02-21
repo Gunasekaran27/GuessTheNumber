@@ -1,1 +1,26 @@
 
+<h1>Guess The Number From 1 to 10</h1><br>
+<input id="one"><br>
+<button onclick="guess()">Guess</button><br>
+<p id="guna"></p>
+
+<script>
+
+    //selecting the container
+    var num=document.getElementById("one")
+    var para=document.getElementById("guna")
+
+    function guess(){
+        var answer=Number(num.value)
+        var randomnumber=Math.random()*10
+        var number=(Math.floor(randomnumber))+1
+        console.log(number)
+        if(answer==number){
+            para.textContent="guess is correct"
+        }
+        else{
+            para.textContent="guess is wrong"
+        }
+    }
+
+</script>
